@@ -4,19 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Dog Years Calculator</title>
+        <script src="jquery/jquery.min.js"></script>        
+        <script src="jquery/dogyears.js"></script>
         <script>
-            window.onload=function()
-            {
+            $(document).ready(function($){
                 document.getElementById('btnCalc').addEventListener('click', calcAge);
-            }
-            
-            function calcAge(e)
-            {
-                var age = document.getElementById('dogAge').value;
-                age = age * 7;
-                var result = "In dog Years, your dog is: " + age;
-                document.getElementById('result').innerHTML = result;
-            }
+                document.getElementById('btnDel_All').addEventListener('click', deleteAll);
+                listAll();
+            });
         </script>
     </head>
     <body>
@@ -26,5 +21,22 @@
         <input id="dogAge" type="number" />
         <button id="btnCalc">Calculate</button>
         <div id="result"></div>
+        <div class="row">
+            <div class="col-md-8">
+                <table class="table table-sm table-hover" id="igrade">
+                    <thead>
+                        <tr>
+                            <th>Regs</th>
+                            <th>Human Age</th>
+                            <th>Dog Age</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button id="btnDel_All">Delete All Records</button>
     </body>
 </html>
