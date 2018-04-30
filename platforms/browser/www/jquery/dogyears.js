@@ -67,30 +67,7 @@ function deleteRecord(item)
     });
     
 }
-//
-//
-//(excluir_item = function (item) {
-//    "use strict";
-//    var nro = 0,
-//        i   = 0,
-//        idx = -1,
-//        tr = $(item).closest('tr');
-//    
-//    nro = tr.find('td[data-numero]').data('numero');
-//    tr.fadeOut(200, function () {
-//        tr.remove();
-//    });
-//    
-//    for (i = 0; i < items.numero.length; i += 1) {
-//        if (items.numero[i] == nro) { idx = i; }
-//    }
-//    if (idx != -1) {
-//        items.numero.splice(idx, 1);
-//        items.nome.splice(idx, 1);
-//        items.qtde.splice(idx, 1);
-//        items.preco.splice(idx, 1);
-//        items.total.splice(idx, 1);
-//    }
-//    totalizar_pedido();
-//    return false;
-//});
+
+function callAnotherPage(path) {
+    window.location = path;
+}

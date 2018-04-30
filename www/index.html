@@ -7,11 +7,12 @@
         <script src="jquery/jquery.min.js"></script>        
         <script src="jquery/dogyears.js"></script>
         <script>
-            $(document).ready(function($){
+            window.onload=function ()
+            {
                 document.getElementById('btnCalc').addEventListener('click', calcAge);
                 document.getElementById('btnDel_All').addEventListener('click', deleteAll);
                 listAll();
-            });
+            }            
         </script>
     </head>
     <body>
@@ -38,10 +39,6 @@
             </div>
         </div>
         <button id="btnDel_All">Delete All Records</button>
-        <br>
-        <br>
-        <a href="https://www.w3schools.com">Visit W3Schools</a>
-        <br>
-        <?php echo "<p>Hello World!</p>"; ?>
+        <button id="btnNext" onclick="location.href='page1.html'">PHP</button>
     </body>
 </html>
